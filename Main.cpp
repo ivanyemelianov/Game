@@ -4,6 +4,7 @@ and may not be redistributed without written permission.*/
 //Using SDL and standard IO
 #include <SDL.h>
 #include <stdio.h>
+#include "MainGame.h"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 800;
@@ -89,7 +90,10 @@ void close()
 
 int main(int argc, char* args[])
 {
-	//Start up SDL and create window
+	MainGame mainGame;
+	mainGame.run();
+
+	/*//Start up SDL and create window
 	if (!init())
 	{
 		printf("Failed to initialize!\n");
@@ -116,6 +120,6 @@ int main(int argc, char* args[])
 
 	//Free resources and close SDL
 	close();
-
+	*/
 	return 0;
 }
